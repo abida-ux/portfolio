@@ -117,13 +117,13 @@ const Hero = () => {
 
           {/* Social Network Access Layout Block */}
           <div className="hero-socials-row fade-in-element item-delay-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-glass-icon" aria-label="GitHub Profile">
+            <a href="https://github.com/Abida-ux" target="_blank" rel="noopener noreferrer" className="social-glass-icon" aria-label="GitHub Profile">
               <FiGithub />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-glass-icon" aria-label="LinkedIn Profile">
               <FiLinkedin />
             </a>
-            <a href="mailto:contact@domain.com" className="social-glass-icon" aria-label="Send Email Link">
+            <a href="mailto:abedanyakundi1@gmail.com" className="social-glass-icon" aria-label="Send Email Link">
               <FiMail />
             </a>
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social-glass-icon" aria-label="X Twitter Profile">

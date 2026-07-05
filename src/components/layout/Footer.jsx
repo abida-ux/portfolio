@@ -43,15 +43,15 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { label: 'Email', value: 'abeda.nyakundi@example.com', desc: 'Direct channel' },
+    { label: 'Email', value: 'abedanyakundi1@gmail.com', desc: 'Direct channel' },
     { label: 'Location', value: 'Kenya', desc: 'GMT +3' },
     { label: 'Status', value: 'Available for freelance & remote work', desc: 'Active deployment' }
   ];
 
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com', icon: <FiGithub />, aria: 'Open GitHub Profile' },
+    { name: 'GitHub', url: 'https://github.com/Abida-ux', icon: <FiGithub />, aria: 'Open GitHub Profile' },
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: <FiLinkedin />, aria: 'Connect on LinkedIn' },
-    { name: 'Email', url: 'mailto:abeda.nyakundi@example.com', icon: <FiMail />, aria: 'Open Mail Client' }
+    { name: 'Email', url: 'mailto:abedanyakundi1@gmail.com', icon: <FiMail />, aria: 'Open Mail Client' }
   ];
 
   return (

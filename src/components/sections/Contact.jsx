@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import {
   FiMail,
   FiPhone,
@@ -63,8 +64,8 @@ const Contact = () => {
     {
       id: "phone",
       title: "Phone",
-      value: "+254 114656849",
-      link: "tel:+2547114656849",
+      value: "0114656849",
+      link: "tel:0114656849",
       icon: <FiPhone />
     },
     {
@@ -84,9 +85,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { name: "GitHub", url: "https://github.com/abida-ux", icon: <FiGithub />, aria: "Visit my GitHub Profile" },
+    { name: "GitHub", url: "https://github.com/Abida-ux", icon: <FiGithub />, aria: "Visit my GitHub Profile" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: <FiLinkedin />, aria: "Connect with me on LinkedIn" },
-    { name: "Email", url: "mailto:abedanyakundi1@gmai.com", icon: <FiMail />, aria: "Send me a direct email" }
+    { name: "Email", url: "mailto:abedanyakundi1@gmail.com", icon: <FiMail />, aria: "Send me a direct email" }
   ];
 
   // Logic Handlers & Validation Systems
@@ -115,21 +116,36 @@ const Contact = () => {
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     setIsSubmitting(true);
 
-    // Mimic precise async network latency thresholds
-    setTimeout(() => {
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: import.meta.env.VITE_EMAIL_TO || 'abedanyakundi1@gmail.com'
+    };
+
+    try {
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
       setIsSubmitting(false);
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
 
-      // Clear successful submission indicator systematically after delay frame
       setTimeout(() => setSubmitSuccess(false), 6000);
-    }, 1800);
+    } catch (err) {
+      console.error('EmailJS send error:', err);
+      setIsSubmitting(false);
+      setErrors(prev => ({ ...prev, submit: 'Failed to send message. Please try again later.' }));
+    }
   };
 
   return (

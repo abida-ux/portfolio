@@ -17,7 +17,7 @@ import './Navbar.css';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeLink, setActiveLink] = useState('Home');
 
   const navItems = [
@@ -42,8 +42,13 @@ const Navbar = () => {
   };
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('light-theme');
+    const next = !isDarkMode;
+    setIsDarkMode(next);
+    if (next) {
+      document.body.classList.remove('light-theme');
+    } else {
+      document.body.classList.add('light-theme');
+    }
   };
 
   const handleNavLinkClick = (name) => {
@@ -89,7 +94,7 @@ const Navbar = () => {
             aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             title={isDarkMode ? 'Light Mode' : 'Dark Mode'}
           >
-            {isDarkMode ? <FiSun /> : <FiMoon />}
+            {isDarkMode ? <FiMoon /> : <FiSun />}
           </button>
 
           <a href="#contact" className="hire-button" onClick={() => handleNavLinkClick('Contact')}>

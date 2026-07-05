@@ -14,6 +14,74 @@ body {
   color: #111827;
 }
 
+/* Responsive base font sizing */
+html {
+  font-size: 16px;
+}
+@media (max-width: 1024px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 640px) {
+  html { font-size: 14px; }
+}
+
+/* Light theme overrides when `light-theme` is applied to body */
+body.light-theme {
+  background: #ffffff;
+  color: #0b1220;
+}
+
+/* Global component-level overrides to ensure light surfaces look good */
+body.light-theme .contact-section,
+body.light-theme .hero-section,
+body.light-theme .footer-canvas,
+body.light-theme .contact-form-glass-frame,
+body.light-theme .contact-glass-info-card,
+body.light-theme .premium-dev-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  color: #0b1220;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+  border: 1px solid rgba(11,18,32,0.06);
+}
+
+body.light-theme .contact-main-title,
+body.light-theme .hero-title {
+  -webkit-text-fill-color: unset;
+  background: none;
+  color: #071133;
+}
+
+body.light-theme .contact-sub-title,
+body.light-theme .contact-header-paragraph,
+body.light-theme .contact-card-value,
+body.light-theme .contact-card-description,
+body.light-theme .brand-narrative-paragraph {
+  color: #475569;
+}
+
+body.light-theme .social-circular-glass-btn,
+body.light-theme .social-glass-icon {
+  background: rgba(11,18,32,0.04);
+  color: #0b1220;
+  border: 1px solid rgba(11,18,32,0.04);
+}
+
+/* Improve overall container responsiveness */
+.container, .contact-section-container, .hero-container, .footer-section-container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .contact-split-grid-layout,
+  .some-grid-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .contact-section { padding: 80px 20px; }
+}
+
 a {
   text-decoration: none;
   color: inherit;
