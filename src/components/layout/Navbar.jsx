@@ -34,6 +34,10 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
+    // Ensure theme class is present on mount based on initial state
+    if (!isDarkMode) {
+      document.body.classList.add('light-theme');
+    }
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

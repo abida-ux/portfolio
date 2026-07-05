@@ -82,6 +82,62 @@ body.light-theme .social-glass-icon {
   .contact-section { padding: 80px 20px; }
 }
 
+/* Hide common decorative dividers for a cleaner, uniform look */
+.footer-horizontal-divider-accent,
+#spacer,
+#next-steps,
+[class*="divider"],
+[class*="Divider"] {
+  border: none !important;
+  display: none !important;
+}
+
+/* Ensure all main sections use a unified light surface when light theme is enabled */
+body.light-theme .hero-section,
+body.light-theme .about-section,
+body.light-theme .contact-section,
+body.light-theme .projects-section,
+body.light-theme .skills-section,
+body.light-theme .experience-section,
+body.light-theme .footer-canvas {
+  background: linear-gradient(180deg,#ffffff,#fbfdff) !important;
+  color: #071133 !important;
+  border: none !important;
+  box-shadow: 0 8px 30px rgba(11,18,32,0.06) !important;
+}
+
+/* Default dark-mode: force a uniform dark surface across main sections to remove seams */
+.hero-section,
+.about-section,
+.contact-section,
+.projects-section,
+.skills-section,
+.experience-section,
+.footer-canvas {
+  background: radial-gradient(circle at 50% 50%, #0B1120 0%, #050816 100%) !important;
+  color: #F8FAFC !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove thin grid lines inside sections that can create visual seams */
+.contact-matrix-grid,
+.footer-matrix-grid,
+.hero-ambient-grid {
+  background-image: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+/* Make sure interactive glass cards look appropriate in light mode */
+body.light-theme .contact-glass-info-card,
+body.light-theme .contact-form-glass-frame,
+body.light-theme .footer-glass-logo-frame,
+body.light-theme .premium-dev-card {
+  background: #fff !important;
+  border: 1px solid rgba(11,18,32,0.06) !important;
+}
+
 a {
   text-decoration: none;
   color: inherit;
