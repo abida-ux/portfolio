@@ -1,0 +1,628 @@
+/* Core Engineering Architectural Configuration Design Variables Framework Mapping */
+:root {
+  --bg-deep-base-05: #050816;
+  --bg-deep-base-0B: #0B1120;
+  --bg-deep-base-11: #111827;
+
+  --primary-accent: #00E5FF;
+  --secondary-accent: #7C3AED;
+  --highlight: #22D3EE;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+
+  --glass-surface-card: rgba(255, 255, 255, 0.04);
+  --glass-surface-border: rgba(255, 255, 255, 0.08);
+  --glass-surface-border-hover: rgba(255, 255, 255, 0.18);
+
+  --font-inter-core: 'Inter', sans-serif;
+  --transition-premium-fluid: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-premium-depth: 0 40px 80px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Base Structural Framing Setup Rules Mapping */
+.experience-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-deep-base-05);
+  background: radial-gradient(circle at 50% 50%, var(--bg-deep-base-0B) 0%, var(--bg-deep-base-05) 100%);
+  padding: 140px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-inter-core);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
+
+.experience-section-container {
+  width: 100%;
+  max-width: 1240px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Line Matrix Grid Backdrop Overlay */
+.experience-matrix-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Atmospheric Blurry Floating Orbs Setup Mapping Safely */
+.experience-glow-accent {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+  pointer-events: none;
+  opacity: 0.24;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.glow-cyan {
+  top: 10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--primary-accent);
+  animation: visualFloatingOrb 20s ease-in-out infinite alternate;
+}
+
+.glow-purple {
+  bottom: 10%;
+  right: -10%;
+  width: 550px;
+  height: 550px;
+  background: var(--secondary-accent);
+  animation: visualFloatingOrb 25s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes visualFloatingOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, -40px) scale(1.15); }
+}
+
+/* Floating Particle Nodes System Architecture Mapping Rules safely */
+.experience-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 2;
+}
+
+.micro-p1 {
+  width: 6px;
+  height: 6px;
+  top: 30%;
+  right: 15%;
+  background: var(--primary-accent);
+  box-shadow: 0 0 12px var(--primary-accent);
+}
+
+.micro-p2 {
+  width: 8px;
+  height: 8px;
+  bottom: 30%;
+  left: 15%;
+  background: var(--secondary-accent);
+  box-shadow: 0 0 12px var(--secondary-accent);
+}
+
+/* Section Header Formats layout */
+.experience-section-header {
+  text-align: center;
+  margin-bottom: 90px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-sub-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--primary-accent);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.experience-main-heading {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin: 0 0 20px 0;
+  background: linear-gradient(135deg, #FFFFFF 40%, #C7D2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experience-header-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Master Timeline Structural Engine Canvas Layout Framework Mapping Rules */
+.experience-timeline-canvas {
+  position: relative;
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.experience-timeline-spine-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.05) 8%, 
+    rgba(0, 229, 255, 0.3) 25%, 
+    rgba(124, 58, 237, 0.3) 75%, 
+    rgba(255, 255, 255, 0.05) 92%, 
+    transparent 100%
+  );
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.timeline-entry-row-node {
+  position: relative;
+  width: 100%;
+  margin-bottom: 64px;
+  display: flex;
+}
+
+.timeline-entry-row-node:last-child {
+  margin-bottom: 0;
+}
+
+/* Dynamic Spatial Separation Configuration Mapping */
+.node-align-left {
+  justify-content: flex-start;
+  padding-right: 50%;
+}
+
+.node-align-right {
+  justify-content: flex-end;
+  padding-left: 50%;
+}
+
+/* Center Column Bullet Hub Component Architecture Matrix Setup */
+.timeline-center-bullet-hub {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-deep-base-05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: var(--transition-premium-fluid);
+}
+
+.bullet-hub-inner-core {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: var(--transition-premium-fluid);
+}
+
+/* Timeline Interactive Node Element State Hover Bindings Mapping */
+.timeline-entry-row-node:hover .timeline-center-bullet-hub {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  transform: translate(-50%, 0) scale(1.08);
+}
+
+.timeline-entry-row-node:hover .bullet-hub-inner-core {
+  color: var(--primary-accent);
+  background: rgba(0, 229, 255, 0.05);
+}
+
+/* Premium Component: Glassmorphism Timeline Content Card Setup Mapping */
+.experience-timeline-glass-card {
+  position: relative;
+  width: 90%;
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 24px;
+  padding: 36px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-premium-depth);
+  transition: var(--transition-premium-fluid);
+}
+
+.node-align-left .experience-timeline-glass-card {
+  margin-right: 48px;
+  margin-left: auto;
+}
+
+.node-align-right .experience-timeline-glass-card {
+  margin-left: 48px;
+  margin-right: auto;
+}
+
+.experience-card-hover-border-glow {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.15), transparent 40%, rgba(124, 58, 237, 0.15));
+  opacity: 0.4;
+  transition: var(--transition-premium-fluid);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Premium Elevational Hover Animations Manifests Setup Rules safely */
+.experience-timeline-glass-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-surface-border-hover);
+  box-shadow: var(--shadow-premium-depth), 0 0 40px rgba(0, 229, 255, 0.03);
+}
+
+.experience-timeline-glass-card:hover .experience-card-hover-border-glow {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.25), transparent 50%, rgba(124, 58, 237, 0.3));
+}
+
+/* Card Internal Meta Description Typography Blocks Alignment System Mapping */
+.experience-card-header-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-header-role-line {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.experience-card-role-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.experience-card-company-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-accent);
+}
+
+.experience-card-meta-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.meta-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.meta-metric-icon {
+  font-size: 0.88rem;
+}
+
+.experience-card-body-narrative {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 24px 0;
+}
+
+/* Achievements Itemized Framework Node List Layout Mapping */
+.experience-card-achievements-block {
+  margin-bottom: 28px;
+}
+
+.achievements-section-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+  margin: 0 0 12px 0;
+}
+
+.achievements-ul-list-structure {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achievement-li-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.achievement-item-check-icon {
+  font-size: 0.95rem;
+  color: var(--primary-accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Micro Technology Pills Modules Layer Layout Framework mapping rules safely */
+.experience-card-technology-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge-glass-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 30px;
+  transition: var(--transition-premium-fluid);
+}
+
+.experience-timeline-glass-card:hover .tech-badge-glass-pill {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Shimmer Linear Glare Pass-through Structural Setup */
+.experience-card-shimmer-sweep {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.experience-timeline-glass-card:hover .experience-card-shimmer-sweep {
+  left: 200%;
+  transition: left 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Continuous Learning Platforms Shelf Component Module Layout Mapping rules safely */
+.continuous-learning-shelf-card {
+  position: relative;
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 24px;
+  padding: 36px 40px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-premium-depth);
+  margin-top: 32px;
+  overflow: hidden;
+  transition: var(--transition-premium-fluid);
+  outline: none;
+}
+
+.learning-shelf-card-glow-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 15% 15%, rgba(124, 58, 237, 0.08), transparent 60%);
+  opacity: 0.6;
+  transition: var(--transition-premium-fluid);
+  pointer-events: none;
+}
+
+.continuous-learning-shelf-card:hover, .continuous-learning-shelf-card:focus-within {
+  transform: translateY(-2px);
+  border-color: var(--glass-surface-border-hover);
+  box-shadow: var(--shadow-premium-depth), 0 0 30px rgba(124, 58, 237, 0.03);
+}
+
+.continuous-learning-shelf-card:hover .learning-shelf-card-glow-layer,
+.continuous-learning-shelf-card:focus-within .learning-shelf-card-glow-layer {
+  opacity: 1;
+  background: radial-gradient(circle at 15% 15%, rgba(124, 58, 237, 0.15), transparent 70%);
+}
+
+.learning-shelf-split-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.learning-shelf-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.learning-shelf-header-icon {
+  font-size: 1.3rem;
+  color: var(--secondary-accent);
+}
+
+.learning-shelf-title-row h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.learning-shelf-text-block p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.learning-shelf-badges-flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.learning-shelf-animated-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(124, 58, 237, 0.04);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: var(--transition-premium-fluid);
+}
+
+.learning-shelf-animated-badge-pill span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.learning-pill-arrow-indicator {
+  font-size: 0.75rem;
+  color: var(--secondary-accent);
+  transition: var(--transition-premium-fluid);
+}
+
+.learning-shelf-animated-badge-pill:hover {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: var(--secondary-accent);
+  transform: translateX(2px) scale(1.03);
+}
+
+.learning-shelf-animated-badge-pill:hover .learning-pill-arrow-indicator {
+  transform: translateX(2px);
+  color: var(--primary-accent);
+}
+
+/* Coordinated Entry Scrolls Reveal Sequence Mechanisms via Observer Anchors */
+.experience-section .experience-section-header,
+.experience-section .timeline-entry-row-node,
+.experience-section .continuous-learning-shelf-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.experience-section.animate-visible .experience-section-header,
+.experience-section.animate-visible .continuous-learning-shelf-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-section.animate-visible .timeline-entry-row-node {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--timeline-node-idx) * 0.15s + 0.2s);
+}
+
+/* Fluid Responsive Breakpoint Adaptation Rules Settings Framework Mapping rules safely */
+@media (max-width: 1024px) {
+  .experience-timeline-spine-line {
+    left: 22px;
+  }
+
+  .timeline-entry-row-node {
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .timeline-center-bullet-hub {
+    left: 22px;
+  }
+
+  .experience-timeline-glass-card {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .learning-shelf-split-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-section {
+    padding: 90px 20px;
+  }
+
+  .experience-section-header {
+    margin-bottom: 56px;
+  }
+
+  .experience-timeline-glass-card {
+    padding: 24px;
+  }
+
+  .experience-card-role-title {
+    font-size: 1.15rem;
+  }
+
+  .continuous-learning-shelf-card {
+    padding: 24px;
+  }
+}

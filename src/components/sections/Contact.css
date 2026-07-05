@@ -1,0 +1,700 @@
+/* Core Engineering Architectural Configuration Design Variables Framework Mapping */
+:root {
+  --bg-deep-base-05: #050816;
+  --bg-deep-base-0B: #0B1120;
+  --bg-deep-base-11: #111827;
+
+  --primary-accent: #00E5FF;
+  --secondary-accent: #7C3AED;
+  --highlight: #22D3EE;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+
+  --glass-surface-card: rgba(255, 255, 255, 0.04);
+  --glass-surface-border: rgba(255, 255, 255, 0.08);
+  --glass-surface-border-hover: rgba(255, 255, 255, 0.18);
+
+  --font-inter-core: 'Inter', sans-serif;
+  --transition-premium-fluid: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-premium-depth: 0 40px 80px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Base Layout Framing Structural Rules Mapping */
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-deep-base-05);
+  background: radial-gradient(circle at 50% 50%, var(--bg-deep-base-0B) 0%, var(--bg-deep-base-05) 100%);
+  padding: 140px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-inter-core);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section-container {
+  width: 100%;
+  max-width: 1240px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Line Matrix Grid Backdrop Overlay */
+.contact-matrix-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Atmospheric Blurry Floating Orbs Setup Mapping Safely */
+.contact-glow-accent {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+  pointer-events: none;
+  opacity: 0.22;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.glow-cyan {
+  bottom: -10%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: var(--primary-accent);
+  animation: visualFloatingOrb 22s ease-in-out infinite alternate;
+}
+
+.glow-purple {
+  top: -10%;
+  left: -5%;
+  width: 550px;
+  height: 550px;
+  background: var(--secondary-accent);
+  animation: visualFloatingOrb 18s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes visualFloatingOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(45px, -35px) scale(1.15); }
+}
+
+/* Background Node Space Particles */
+.contact-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 2;
+}
+
+.micro-p1 {
+  width: 6px;
+  height: 6px;
+  top: 25%;
+  right: 35%;
+  background: var(--primary-accent);
+  box-shadow: 0 0 12px var(--primary-accent);
+}
+
+.micro-p2 {
+  width: 8px;
+  height: 8px;
+  bottom: 35%;
+  left: 35%;
+  background: var(--secondary-accent);
+  box-shadow: 0 0 12px var(--secondary-accent);
+}
+
+/* Section Header Container Configurations mapping rules safely */
+.contact-section-header {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-sub-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--primary-accent);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.contact-main-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin: 0 0 20px 0;
+  background: linear-gradient(135deg, #FFFFFF 40%, #C7D2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-header-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Binary Column Split Split Structural Flex Grid Layout Framework Mapping */
+.contact-split-grid-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left Informational Structural Blocks Stack Layout Alignment Systems */
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-glass-info-card {
+  position: relative;
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: var(--transition-premium-fluid);
+}
+
+.contact-glass-info-card.is-interactive-anchor {
+  cursor: pointer;
+}
+
+.info-card-hover-border-glow {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.12), transparent 40%, rgba(124, 58, 237, 0.12));
+  opacity: 0.4;
+  transition: var(--transition-premium-fluid);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Card Interactive State Bindings Setup Rules safely mapping variables */
+.contact-glass-info-card:hover, .contact-glass-info-card:focus-within {
+  transform: translateY(-3px);
+  border-color: var(--glass-surface-border-hover);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow-premium-depth), 0 0 30px rgba(0, 229, 255, 0.02);
+}
+
+.contact-glass-info-card:hover .info-card-hover-border-glow, 
+.contact-glass-info-card:focus-within .info-card-hover-border-glow {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.22), transparent 50%, rgba(124, 58, 237, 0.22));
+}
+
+.info-card-icon-frame {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: var(--transition-premium-fluid);
+}
+
+.contact-glass-info-card:hover .info-card-icon-frame, 
+.contact-glass-info-card:focus-within .info-card-icon-frame {
+  color: var(--primary-accent);
+  background: rgba(0, 229, 255, 0.04);
+  border-color: rgba(0, 229, 255, 0.2);
+}
+
+.info-card-content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.info-card-title-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.info-card-value-display {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.info-card-arrow-indicator {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: var(--transition-premium-fluid);
+}
+
+.contact-glass-info-card:hover .info-card-arrow-indicator, 
+.contact-glass-info-card:focus-within .info-card-arrow-indicator {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--primary-accent);
+}
+
+/* Circular Interactive Social Media Network System Layout Mapping rules safely */
+.contact-social-networks-shelf {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 4px;
+}
+
+.social-shelf-title-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.social-shelf-flex-row {
+  display: flex;
+  gap: 16px;
+}
+
+.social-circular-glass-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--glass-surface-card);
+  border: 1px solid var(--glass-surface-border);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  outline: none;
+  transition: var(--transition-premium-fluid);
+}
+
+.social-btn-hover-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--primary-accent), transparent 70%);
+  opacity: 0;
+  transition: var(--transition-premium-fluid);
+  z-index: -1;
+}
+
+/* Tooltip Display Module Subsystem */
+.social-btn-tooltip-bubble {
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: var(--bg-deep-base-11);
+  border: 1px solid var(--glass-surface-border);
+  color: var(--text-main);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: var(--transition-premium-fluid);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.social-circular-glass-btn:hover {
+  color: #FFFFFF;
+  border-color: var(--glass-surface-border-hover);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+.social-circular-glass-btn:hover .social-btn-hover-glow {
+  opacity: 0.15;
+}
+
+.social-circular-glass-btn:hover .social-btn-tooltip-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Right Column Contact Form Input Structure Components Mapping Rules */
+.contact-form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-cta-abstract-box {
+  background: rgba(255, 255, 255, 0.015);
+  border-left: 3px solid var(--primary-accent);
+  padding: 16px 24px;
+  border-radius: 0 16px 16px 0;
+}
+
+.cta-abstract-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.2px;
+}
+
+.cta-abstract-narrative {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.contact-form-glass-frame {
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 24px;
+  padding: 44px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-premium-depth);
+}
+
+.contact-form-element-structure {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Floating Label Adaptive Input Field Systems Framework Mapping Rules safely */
+.form-input-field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-input-field-wrapper input,
+.form-input-field-wrapper textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  outline: none;
+  transition: var(--transition-premium-fluid);
+}
+
+.form-input-field-wrapper textarea {
+  resize: none;
+}
+
+.form-input-field-wrapper label {
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: var(--transition-premium-fluid);
+}
+
+/* Input Focus Accent Underlying Bar Element Graphics mapping hooks safely */
+.input-focus-accent-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary-accent), var(--secondary-accent));
+  transition: var(--transition-premium-fluid);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Float logic triggers when input is focused or placeholder is not visible */
+.form-input-field-wrapper input:focus ~ label,
+.form-input-field-wrapper input:not(:placeholder-shown) ~ label,
+.form-input-field-wrapper textarea:focus ~ label,
+.form-input-field-wrapper textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary-accent);
+  background: var(--bg-deep-base-0B);
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.form-input-field-wrapper input:focus,
+.form-input-field-wrapper textarea:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-input-field-wrapper input:focus ~ .input-focus-accent-bar,
+.form-input-field-wrapper textarea:focus ~ .input-focus-accent-bar {
+  width: 100%;
+}
+
+/* Error Constraints Management State Configurations rules safely */
+.form-input-field-wrapper.has-input-error input,
+.form-input-field-wrapper.has-input-error textarea {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.02);
+}
+
+.form-input-field-wrapper.has-input-error input:focus ~ label,
+.form-input-field-wrapper.has-input-error textarea:focus ~ label {
+  color: #EF4444;
+}
+
+.form-input-field-wrapper.has-input-error .input-focus-accent-bar {
+  background: #EF4444;
+}
+
+.form-input-inline-error {
+  position: absolute;
+  bottom: -20px;
+  left: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #EF4444;
+  letter-spacing: 0.2px;
+}
+
+/* Submission Interaction Button Block Layout */
+.contact-form-submit-trigger-btn {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  box-sizing: border-box;
+  transition: var(--transition-premium-fluid);
+}
+
+.submit-btn-send-icon {
+  font-size: 1.05rem;
+  transition: var(--transition-premium-fluid);
+}
+
+.submit-btn-glow-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary-accent), var(--primary-accent));
+  opacity: 0;
+  transition: var(--transition-premium-fluid);
+  z-index: -1;
+}
+
+.contact-form-submit-trigger-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(0, 229, 255, 0.45);
+}
+
+.contact-form-submit-trigger-btn:hover:not(:disabled) .submit-btn-glow-layer {
+  opacity: 1;
+}
+
+.contact-form-submit-trigger-btn:hover:not(:disabled) .submit-btn-send-icon {
+  transform: translateX(4px) translateY(-2px);
+}
+
+.contact-form-submit-trigger-btn:disabled {
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+}
+
+.submit-btn-spinner-text {
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+/* Message Sent Successful Success Template Viewport Layout */
+.contact-form-success-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  animation: formSuccessFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes formSuccessFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.success-state-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  color: var(--primary-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.success-state-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+}
+
+.success-state-paragraph {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 420px;
+}
+
+/* Scroll Revelational State Optimization Sequences Mapping Via Observer Triggers */
+.contact-section .contact-section-header,
+.contact-section .contact-glass-info-card,
+.contact-section .contact-social-networks-shelf,
+.contact-section .contact-form-column {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-section.animate-visible .contact-section-header,
+.contact-section.animate-visible .contact-form-column {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-section.animate-visible .contact-glass-info-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--contact-card-idx) * 0.1s + 0.2s);
+}
+
+.contact-section.animate-visible .contact-social-networks-shelf {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+/* Fluid Responsive Breakpoint Adaptation Rules Settings Framework Mapping */
+@media (max-width: 1024px) {
+  .contact-split-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .contact-info-column {
+    gap: 36px;
+  }
+
+  .contact-form-glass-frame {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 90px 20px;
+  }
+
+  .contact-section-header {
+    margin-bottom: 48px;
+  }
+
+  .contact-form-glass-frame {
+    padding: 28px 20px;
+  }
+
+  .contact-form-element-structure {
+    gap: 24px;
+  }
+
+  .social-circular-glass-btn:hover .social-btn-tooltip-bubble {
+    display: none; /* Suppress dynamic anchor hover tools on mobile layers */
+  }
+}

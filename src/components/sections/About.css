@@ -1,0 +1,575 @@
+/* Custom CSS Reset Core System Architecture Mapping Variables Safely */
+:root {
+  --bg-dark-core: #050816;
+  --bg-dark-sub: #0B1120;
+  --bg-dark-deep: #111827;
+  
+  --primary-accent: #00E5FF;
+  --secondary-accent: #7C3AED;
+  --highlight: #22D3EE;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+
+  --glass-surface-card: rgba(255, 255, 255, 0.04);
+  --glass-surface-border: rgba(255, 255, 255, 0.08);
+  --glass-surface-border-hover: rgba(255, 255, 255, 0.18);
+  
+  --font-inter-core: 'Inter', sans-serif;
+  --transition-premium-fluid: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-premium-depth: 0 40px 80px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Base Layout Framing Structural Rules Mapping */
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark-core);
+  background: radial-gradient(circle at 50% 50%, var(--bg-dark-sub) 0%, var(--bg-dark-core) 100%);
+  padding: 140px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-inter-core);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
+
+.about-section-container {
+  width: 100%;
+  max-width: 1240px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Structural Line Matrix Backdrop Styling mapping */
+.about-bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fluid Atmospheric Blurry Floating Orbs Setup */
+.about-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+  pointer-events: none;
+  opacity: 0.28;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.orb-cyan {
+  top: 20%;
+  left: -10%;
+  width: 550px;
+  height: 550px;
+  background: var(--primary-accent);
+  animation: floatingOrbMotion 18s ease-in-out infinite alternate;
+}
+
+.orb-purple {
+  bottom: 20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--secondary-accent);
+  animation: floatingOrbMotion 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatingOrbMotion {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, -30px) scale(1.15); }
+}
+
+/* Background Particle Nodes System */
+.about-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.pt-1 {
+  width: 6px;
+  height: 6px;
+  top: 15%;
+  right: 25%;
+  background: var(--primary-accent);
+  box-shadow: 0 0 12px var(--primary-accent);
+}
+
+.pt-2 {
+  width: 8px;
+  height: 8px;
+  bottom: 45%;
+  left: 15%;
+  background: var(--secondary-accent);
+  box-shadow: 0 0 12px var(--secondary-accent);
+}
+
+/* Main Split Grid Architecture Mapping Content Hierarchy */
+.about-split-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Graphic Column: Floating Profile Frame Component Module */
+.about-visual-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-frame-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-decorative-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.ring-outer {
+  width: 120%;
+  height: 120%;
+  animation: rotateRing 40s linear infinite;
+}
+
+.ring-inner {
+  width: 110%;
+  height: 110%;
+  border-color: rgba(0, 229, 255, 0.1);
+  animation: rotateRing 25s linear infinite reverse;
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.profile-glass-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 15, 36, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 50%;
+  padding: 16px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-premium-depth), inset 0 0 20px rgba(255, 255, 255, 0.02);
+  animation: visualFloatingEffect 6s ease-in-out infinite alternate;
+}
+
+@keyframes visualFloatingEffect {
+  0% { transform: translateY(0px) scale(1); box-shadow: var(--shadow-premium-depth); }
+  100% { transform: translateY(-15px) scale(1.02); box-shadow: var(--shadow-premium-depth), 0 15px 30px rgba(0, 229, 255, 0.05); }
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.05), rgba(124, 58, 237, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.placeholder-avatar-icon {
+  font-size: 3.5rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.placeholder-avatar-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Right Content Narrative Typography Systems */
+.about-text-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text-header {
+  margin-bottom: 24px;
+}
+
+.about-small-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--primary-accent);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.about-main-heading {
+  font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin: 0;
+  background: linear-gradient(135deg, #FFFFFF 40%, #C7D2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-narrative-block p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0 0 20px 0;
+}
+
+.about-narrative-block p:last-child {
+  margin-bottom: 36px;
+}
+
+/* Personal Metadata Information Row Cards Grid Container */
+.about-details-layout-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.detail-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 14px 20px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  transition: var(--transition-premium-fluid);
+  outline: none;
+}
+
+.detail-meta-row:hover, .detail-meta-row:focus-within {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.detail-meta-icon {
+  font-size: 1.2rem;
+  color: var(--primary-accent);
+  display: flex;
+  align-items: center;
+}
+
+.detail-meta-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-meta-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-meta-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Action Call Workspace Elements Mapping Button System */
+.about-actions-row {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-action-primary, .btn-action-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-premium-fluid);
+  box-sizing: border-box;
+}
+
+.btn-action-primary {
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.btn-action-icon {
+  font-size: 1.05rem;
+  transition: var(--transition-premium-fluid);
+}
+
+.btn-action-primary:hover .btn-action-icon {
+  transform: translateY(2px);
+}
+
+.btn-action-glow-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary-accent), var(--primary-accent));
+  opacity: 0;
+  transition: var(--transition-premium-fluid);
+  z-index: -1;
+}
+
+.btn-action-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+}
+
+.btn-action-primary:hover .btn-action-glow-layer {
+  opacity: 1;
+}
+
+.btn-action-secondary {
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-main);
+  border: 1px solid var(--glass-surface-border);
+}
+
+.btn-action-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--glass-surface-border-hover);
+  transform: translateY(-2px);
+}
+
+.btn-action-secondary:hover .btn-action-icon {
+  transform: translateX(4px);
+}
+
+/* Sub-shelf Pillar Platform Cards Interface Layout Grid mapping */
+.about-pillars-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-pillar-individual-card {
+  position: relative;
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-premium-depth);
+  transition: var(--transition-premium-fluid);
+  outline: none;
+}
+
+.about-pillar-card-hover-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: radial-gradient(circle at 20% 20%, rgba(0, 229, 255, 0.05), transparent 65%);
+  opacity: 0;
+  transition: var(--transition-premium-fluid);
+  pointer-events: none;
+}
+
+.about-pillar-individual-card:hover, .about-pillar-individual-card:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--glass-surface-border-hover);
+  box-shadow: var(--shadow-premium-depth), 0 0 25px rgba(0, 229, 255, 0.03);
+}
+
+.about-pillar-individual-card:hover .about-pillar-card-hover-glow,
+.about-pillar-individual-card:focus-within .about-pillar-card-hover-glow {
+  opacity: 1;
+}
+
+.about-pillar-card-icon-frame {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: var(--transition-premium-fluid);
+}
+
+.about-pillar-individual-card:hover .about-pillar-card-icon-frame,
+.about-pillar-individual-card:focus-within .about-pillar-card-icon-frame {
+  color: var(--primary-accent);
+  background: rgba(0, 229, 255, 0.04);
+  border-color: rgba(0, 229, 255, 0.2);
+}
+
+.about-pillar-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-pillar-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.about-pillar-card-content p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Scroll Revelational State Optimization Sequences Mapping Via Observer Triggers */
+.about-section .about-visual-column,
+.about-section .about-text-column,
+.about-section .about-pillar-individual-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-section.animate-visible .about-visual-column {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section.animate-visible .about-text-column {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+
+.about-section.animate-visible .about-pillar-individual-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--pillar-idx) * 0.1s + 0.3s);
+}
+
+/* Fluid Responsive Breakpoint Architecture Adaptation Rules Settings Framework Mapping */
+@media (max-width: 1024px) {
+  .about-split-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-visual-column {
+    order: 1;
+  }
+
+  .about-text-column {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-details-layout-stack {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .about-pillars-layout-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 90px 20px;
+  }
+
+  .profile-frame-wrapper {
+    max-width: 280px;
+  }
+
+  .about-details-layout-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-meta-row {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .about-actions-row {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-action-primary, .btn-action-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-pillars-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

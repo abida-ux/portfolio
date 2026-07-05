@@ -1,0 +1,540 @@
+/* Core Engineering Architectural Configuration Design Variables Framework Mapping */
+:root {
+  --bg-deep-base-05: #050816;
+  --bg-deep-base-0B: #0B1120;
+  --bg-deep-base-11: #111827;
+
+  --primary-accent: #00E5FF;
+  --secondary-accent: #7C3AED;
+  --highlight: #22D3EE;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+
+  --glass-surface-card: rgba(255, 255, 255, 0.04);
+  --glass-surface-border: rgba(255, 255, 255, 0.08);
+  --glass-surface-border-hover: rgba(255, 255, 255, 0.18);
+
+  --font-inter-core: 'Inter', sans-serif;
+  --transition-premium-fluid: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-premium-depth: 0 40px 80px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Base Structural Framing Setup Rules Mapping */
+.footer-canvas {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-deep-base-05);
+  background: radial-gradient(circle at 50% 100%, var(--bg-deep-base-0B) 0%, var(--bg-deep-base-05) 100%);
+  padding: 100px 40px 48px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-inter-core);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-section-container {
+  width: 100%;
+  max-width: 1240px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Line Matrix Grid Backdrop Overlay */
+.footer-matrix-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 100%, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 100%, black 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Atmospheric Blurry Floating Orbs Setup Mapping Safely */
+.footer-glow-accent {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  -webkit-filter: blur(130px);
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+.glow-cyan {
+  bottom: -15%;
+  left: 15%;
+  width: 450px;
+  height: 450px;
+  background: var(--primary-accent);
+  animation: visualFloatingOrb 18s ease-in-out infinite alternate;
+}
+
+.glow-purple {
+  bottom: -15%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: var(--secondary-accent);
+  animation: visualFloatingOrb 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes visualFloatingOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(35px, -25px) scale(1.12); }
+}
+
+/* Background Micro Particles */
+.footer-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.micro-p1 {
+  width: 6px;
+  height: 6px;
+  top: 20%;
+  left: 30%;
+  background: var(--primary-accent);
+}
+
+.micro-p2 {
+  width: 8px;
+  height: 8px;
+  top: 40%;
+  right: 30%;
+  background: var(--secondary-accent);
+}
+
+/* Four-Column Matrix Row Grid Framework Setup */
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.1fr 0.9fr;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-heading-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin: 0 0 24px 0;
+}
+
+/* Brand Grid Layout Identity Stack Styles */
+.brand-column {
+  gap: 20px;
+}
+
+.footer-glass-logo-frame {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--glass-surface-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo-icon {
+  font-size: 1.2rem;
+  color: var(--primary-accent);
+  z-index: 3;
+}
+
+.logo-inner-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(-25deg);
+  animation: logoShimmerSweep 6s ease-in-out infinite;
+}
+
+@keyframes logoShimmerSweep {
+  0% { left: -100%; }
+  30%, 100% { left: 200%; }
+}
+
+.brand-meta-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-primary-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin: 0;
+  background: linear-gradient(135deg, #FFFFFF 60%, #C7D2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-subtitle-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--secondary-accent);
+}
+
+.brand-narrative-paragraph {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Navigational Links Architecture Layout Row */
+.quick-links-ul-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quick-nav-anchor-link {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: var(--transition-premium-fluid);
+  padding: 2px 0;
+  align-self: flex-start;
+  outline: none;
+}
+
+.quick-nav-anchor-link:hover, .quick-nav-anchor-link:focus {
+  color: var(--text-main);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+.anchor-animated-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary-accent);
+  transition: var(--transition-premium-fluid);
+}
+
+.quick-nav-anchor-link:hover .anchor-animated-underline,
+.quick-nav-anchor-link:focus .anchor-animated-underline {
+  width: 100%;
+}
+
+/* Technical Status & Coordinate Metadata Panels Layout */
+.contact-shelf-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-mini-glass-card {
+  background: var(--glass-surface-card);
+  border: 1px solid var(--glass-surface-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: var(--transition-premium-fluid);
+}
+
+.contact-mini-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(4px);
+}
+
+.contact-card-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-accent);
+}
+
+.contact-card-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  word-break: break-all;
+}
+
+.contact-card-description {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Circular Glass Interactive Network Interfaces Nodes Mapping */
+.social-shelf-flex-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social-circular-glass-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass-surface-card);
+  border: 1px solid var(--glass-surface-border);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  outline: none;
+  transition: var(--transition-premium-fluid);
+}
+
+.social-btn-hover-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--primary-accent), transparent 70%);
+  opacity: 0;
+  transition: var(--transition-premium-fluid);
+  z-index: -1;
+}
+
+/* Tooltip Bubbles Subsystem Matrix Rules Safely */
+.social-btn-tooltip-bubble {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background: var(--bg-deep-base-11);
+  border: 1px solid var(--glass-surface-border);
+  color: var(--text-main);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: var(--transition-premium-fluid);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.social-circular-glass-btn:hover, .social-circular-glass-btn:focus {
+  color: #FFFFFF;
+  border-color: var(--glass-surface-border-hover);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px -4px rgba(0, 229, 255, 0.15);
+}
+
+.social-circular-glass-btn:hover .social-btn-hover-glow,
+.social-circular-glass-btn:focus .social-btn-hover-glow {
+  opacity: 0.15;
+}
+
+.social-circular-glass-btn:hover .social-btn-tooltip-bubble,
+.social-circular-glass-btn:focus .social-btn-tooltip-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Horizontal Segment Split Line Node */
+.footer-horizontal-divider-accent {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.08) 20%, 
+    rgba(255, 255, 255, 0.08) 80%, 
+    transparent 100%
+  );
+  margin-bottom: 32px;
+}
+
+/* Bottom Technical Branding Signature Alignment Row Elements */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.copyright-legal-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.engineering-signature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+
+.signature-heart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature-animated-heart-icon {
+  font-size: 0.9rem;
+  color: #EF4444;
+  fill: #EF4444;
+  animation: heartPulseBeat 1.4s infinite cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes heartPulseBeat {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.18); }
+  70% { transform: scale(1); }
+}
+
+/* Floating Scroll-To-Top Trigger Component Module Framework Layout */
+.floating-scroll-top-trigger-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(5, 8, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-surface-border);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  z-index: 99;
+  box-shadow: var(--shadow-premium-depth);
+  
+  /* Initial state is hidden prior to state monitoring trigger values */
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.floating-scroll-top-trigger-btn.trigger-is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+.scroll-btn-hover-border-glow {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  opacity: 0;
+  transition: var(--transition-premium-fluid);
+  z-index: -1;
+}
+
+.scroll-btn-arrow-icon {
+  font-size: 1.15rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-scroll-top-trigger-btn:hover {
+  color: var(--primary-accent);
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+}
+
+.floating-scroll-top-trigger-btn:hover .scroll-btn-hover-border-glow {
+  opacity: 0.15;
+}
+
+.floating-scroll-top-trigger-btn:hover .scroll-btn-arrow-icon {
+  transform: translateY(-4px);
+}
+
+/* Fluid Responsive Breakpoint Adaptation Rules Settings Framework Mapping rules safely */
+@media (max-width: 1024px) {
+  .footer-columns-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-canvas {
+    padding: 70px 20px 32px 20px;
+  }
+
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 56px;
+  }
+
+  .column-heading-label {
+    margin-bottom: 16px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .floating-scroll-top-trigger-btn {
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .social-circular-glass-btn:hover .social-btn-tooltip-bubble {
+    display: none; /* Suppress interactive hover context bubbles on mobile viewports */
+  }
+}
